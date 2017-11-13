@@ -1,0 +1,16 @@
+version: "3"
+services:
+  back:
+    image: rebepoi/weatherapp:backend
+    deploy:
+      restart_policy:
+        condition: on-failure
+    ports:
+      - "9000:9000"
+  front:
+    image: rebepoi/weatherapp:frontend
+    deploy:
+      restart_policy:
+        condition: on-failure
+    ports:
+      - "8000:8000"
