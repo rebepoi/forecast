@@ -1,15 +1,25 @@
 version: "3"
 services:
   back:
-    image: rebepoi/weatherapp:backend
+    image: forecast_back
     deploy:
+      replicas: 2
+      resources:
+        limits:
+          cpus: "0.1"
+          memory: 50M
       restart_policy:
         condition: on-failure
     ports:
       - "9000:9000"
   front:
-    image: rebepoi/weatherapp:frontend
+    image: forecast_front
     deploy:
+      replicas: 2
+      resources:
+        limits:
+          cpus: "0.1"
+          memory: 50M
       restart_policy:
         condition: on-failure
     ports:
