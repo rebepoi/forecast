@@ -1,4 +1,4 @@
-FROM node:ansible
+FROM node:onbuild
 
 WORKDIR /src
 
