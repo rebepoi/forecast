@@ -4,10 +4,6 @@ services:
     image: forecast_back
     deploy:
       replicas: 2
-      resources:
-        limits:
-          cpus: "0.1"
-          memory: 50M
       restart_policy:
         condition: on-failure
     ports:
@@ -16,11 +12,7 @@ services:
     image: forecast_front
     deploy:
       replicas: 2
-      resources:
-        limits:
-          cpus: "0.1"
-          memory: 50M
       restart_policy:
         condition: on-failure
     ports:
-      - "8000:8000"
+      - "80:8000"
