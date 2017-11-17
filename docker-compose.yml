@@ -2,17 +2,9 @@ version: "3"
 services:
   back:
     image: forecast_back
-    deploy:
-      replicas: 2
-      restart_policy:
-        condition: on-failure
     ports:
       - "9000:9000"
   front:
     image: forecast_front
-    deploy:
-      replicas: 2
-      restart_policy:
-        condition: on-failure
     ports:
       - "80:8000"
