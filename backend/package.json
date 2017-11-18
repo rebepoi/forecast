@@ -15,10 +15,11 @@
     "koa": "^2.2.0",
     "koa-json": "^2.0.2",
     "koa-router": "^7.2.0",
-    "node-fetch": "^1.6.3"
+    "node-fetch": "^1.6.3",
+    "node-where": "^1.1.0"
   },
   "devDependencies": {
-    "babel-eslint": "^7.1.1",
+    "babel-eslint": "^7.2.3",
     "eslint": "^3.4.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-plugin-import": "^2.3.0",
