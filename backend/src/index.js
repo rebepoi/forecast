@@ -20,7 +20,6 @@ const fetchWeather = async (lat, lon) => {
   //const endpoint = `${mapURI}/forecast?q=${targetCity}&appid=${appId}&`;
   const response = await fetch(endpoint);
 
-
   return response ? response.json() : {};
 };
 
@@ -40,7 +39,7 @@ router.get('/api/weather', async ctx => {
   const weatherData = await fetchWeather(ctx.lat, ctx.lon);
 
   ctx.type = 'application/json; charset=utf-8';
-  ctx.body = weatherData.list[1].weather ? weatherData.list[1].weather[0] : {};
+  ctx.body = weatherData.list[1].weather ? weatherData.list[1].weather : {};
 });
 
 app.use(router.routes());
