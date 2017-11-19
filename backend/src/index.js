@@ -1,3 +1,5 @@
+const debug = require('debug')('weathermap');
+
 const Koa = require('koa');
 const router = require('koa-router')();
 const fetch = require('node-fetch');
