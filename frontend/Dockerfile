@@ -1,6 +1,6 @@
 FROM node:latest
 
-WORKDIR /src/public/
+WORKDIR /src
 
 COPY package.json .
 
