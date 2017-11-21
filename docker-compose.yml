@@ -1,26 +1,10 @@
 version: "3"
 services:
   back:
-    image: forecast_back
-    deploy:
-      replicas: 2
-      resources:
-        limits:
-          cpus: '0.50'
-          memory: 50M
-      restart_policy:
-        condition: on-failure
+    image: ./backend/
     ports:
       - "9000:9000"
   front:
-    image: forecast_front
-    deploy:
-      replicas: 2
-      resources:
-        limits:
-          cpus: '0.50'
-          memory: 50M
-      restart_policy:
-        condition: on-failure
+    build: ./frontend/
     ports:
       - "80:8000"
