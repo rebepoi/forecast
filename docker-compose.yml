@@ -4,7 +4,7 @@ services:
     image: 127.0.0.1:5000/forecast_back:latest
     build: ./backend/
     deploy:
-      replicas: 5
+      replicas: 2
       resources:
         limits:
           cpus: '0.50'
@@ -19,7 +19,7 @@ services:
       - back
     build: ./frontend/
     deploy:
-      replicas: 5
+      replicas: 2
       resources:
         limits:
           cpus: '0.50'
